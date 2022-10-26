@@ -2,8 +2,9 @@ from pprint import pprint
 import itertools
 import pytest
 import json
-import en_core_web_sm
-import en_core_sci_sm
+import spacy
+#import en_core_web_sm
+#import en_core_sci_sm
 from spacy.tokens import Token
 from role_pattern_nlp import RolePatternBuilder, RolePatternSet
 from role_pattern_nlp.exceptions import FeaturesNotInFeatureDictError
@@ -12,8 +13,9 @@ import visualise_spacy_tree
 
 
 idxs_to_tokens = util.idxs_to_tokens
-# nlp = en_core_web_sm.load()
-nlp = en_core_sci_sm.load()
+
+nlp = spacy.load('en_core_web_sm')
+#nlp = en_core_sci_sm.load()
 Token.set_extension('valence', default=False)
 Token.set_extension('has_valence', default=False)
 

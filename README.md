@@ -1,4 +1,4 @@
-d# Role Pattern
+# Role Pattern
 
 Build and match linguistic patterns for role labelling. Provides an example-driven approach to generate and refine patterns.
 

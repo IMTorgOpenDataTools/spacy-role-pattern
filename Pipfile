@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+spacy = "*"
+visualise-spacy-tree = "*"
+visualise-spacy-pattern = "*"
+pytest = "*"
+spacy-pattern-builder = {path = "./.lib/spacy_pattern_builder-0.0.7-py3-none-any.whl"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+
+[pipenv]
+allow_prereleases = true

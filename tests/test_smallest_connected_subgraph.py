@@ -1,5 +1,5 @@
 from role_pattern_nlp import util
-from test.test_role_pattern import doc3
+from tests.test_role_pattern import doc3
 
 
 idxs_to_tokens = util.idxs_to_tokens
