@@ -11,8 +11,10 @@ def pattern_fitness(pattern, matches, pos_matches, neg_matches):
     true_neg = [m for m in neg_matches if m not in matches]
     n_true_pos = len(true_pos)
     n_true_neg = len(true_neg)
-    pos_score = n_true_pos / len(pos_matches)
-    neg_score = n_true_neg / len(neg_matches)
+    n_pos_matches = len(pos_matches)
+    n_neg_matches = len(neg_matches)
+    pos_score = n_true_pos / n_pos_matches  if n_pos_matches > 0 else 1
+    neg_score = n_true_neg / n_neg_matches  if n_neg_matches > 0 else 1    
     pos_score_weighted = pos_score * 0.5
     neg_score_weighted = neg_score * 0.5
     fitness_score = pos_score_weighted + neg_score_weighted
